@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora</title>
+    <link rel="stylesheet" href="styles.css">
+    
+</head>
+<body>
+    <div class="calculator">
+        <h1>Calculadora</h1>
+        <form id="calcForm" aria-labelledby="calcForm">
+            <div class="form-group">
+                <label for="valor1">Primer valor:</label>
+                <input type="number" id="valor1" aria-label="Primer valor" required>
+            </div>
+            <div class="form-group">
+                <label for="valor2">Segundo valor:</label>
+                <input type="number" id="valor2" aria-label="Segundo valor" required>
+            </div>
+            <div class="form-group">
+                <label for="operacion">Operación:</label>
+                <select id="operacion" aria-label="Operación" required>
+                    <option value="" disabled selected>Selecciona una operación</option>
+                    <option value="suma">&#43; Suma</option>
+                    <option value="resta">&#8722; Resta</option>
+                    <option value="multiplicacion">&#215; Multiplicación</option>
+                    <option value="division">&#247; División</option>
+                </select>
+            </div>
+            <button type="submit" aria-label="Calcular">Calcular</button>
+        </form>
+        <div id="resultado" aria-live="polite"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
